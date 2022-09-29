@@ -6,11 +6,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Created By basil" />
     <title>Note Taking app</title>
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Remix icon cdn added -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <!-- Style css added -->
     <link rel="stylesheet" href="./Css/style.css" />
     <script src="./Js/app.js" defer></script>
   </head>
   <body>
-  
+    <div class="popup-box">
+      <div class="popup">
+        <div class="content">
+          <header>
+            <p>Add a new Note</p>
+            <i class="ri-close-fill"></i>
+          </header>
+          <form action="">
+            <div class="row title">
+              <label for="">Title</label>
+              <input type="text" name="" id="">
+            </div>
+            <div class="row description">
+              <label for="">Description</label>
+              <textarea></textarea>
+            </div>
+            <button>Add Note</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <li class="add-box">
+        <div class="icon"><i class="ri-add-fill"></i></div>
+        <p>Add new note</p>
+      </li>
+      <li class="note">
+        <div class="details">
+          <p>This is Title</p>
+          <span
+            >Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate,
+            neque.</span
+          >
+        </div>
+        <div class="bottom-content">
+          <span>April 3, 2022</span>
+          <div class="settings">
+            <i class="ri-more-fill"></i>
+            <ul class="menu">
+              <li><i class="ri-pencil-line"></i>Edit</li>
+              <li><i class="ri-delete-bin-7-line"></i>Delete</li>
+
+            </ul>
+          </div>
+        </div>
+      </li>
+
+    </div>
   </body>
 </html>
