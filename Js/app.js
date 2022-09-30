@@ -19,12 +19,14 @@ const months = [
   "Deceber",
 ];
 const notes = JSON.parse(localStorage.getItem("notes-list")) || [];
-
+let isUpdate = false:
+let updateId;
 addbox.addEventListener("click", () => {
   popupBox.classList.add("show");
 });
 
 closeIcon.addEventListener("click", () => {
+  isUpdate = false;
   popupBox.classList.remove("show");
   addbutton.innerHTML = 'Add note'
   popuptitle.innerHTML = 'Add a new note'
@@ -69,6 +71,8 @@ function showmenu(selectednote){
   })
 }
 function deletenote(deleteId){
+  let confirmsg = confirm(are you sure ?);
+  if(! confirmsg) return;
   notes.splice(deleteId,1)
   shownotes()
   localStorage.setItem('notes-list', JSON.stringify(notes))
@@ -79,6 +83,8 @@ addbox.addEventListener('click',()=>{
 })
 function editnote(noteid,title,desc){
   addbox.click()
+  isUpdate= true;
+  updateId = noteid;
   titleTag.value = title;
   descTag.value = desc;
   addbutton.innerHTML = 'Update notes'
@@ -103,9 +109,14 @@ addbutton.addEventListener("click", (e) => {
       description: notedesc,
       date: `${month} ${daynumber}, ${year}`,
     };
-
+    if(!isUpdate){
     notes.push(noteInfo);
-    localStorage.setItem("notes-list", JSON.stringify(notes));
+    localStorage.setItem("notes-list", JSON.stringify(notes))
+    }else{
+    isUpdate = false;
+    notes[UpdateId] = noteInfo;
+    }
+    
     closeIcon.click();
     shownotes();
   }
