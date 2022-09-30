@@ -82,8 +82,8 @@ addbox.addEventListener('click',()=>{
   popupBox.classList.add('show')
 })
 function editnote(noteid,title,desc){
-  addbox.click()
   isUpdate= true;
+  addbox.click()
   updateId = noteid;
   titleTag.value = title;
   descTag.value = desc;
