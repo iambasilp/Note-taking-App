@@ -100,7 +100,7 @@ header {
   transform-origin: bottom right;
   transition: transform 0.3s ease;
 }
-.settings:hover .menu {
+.settings .menu.active{
   transform: scale(1);
   visibility: visible;
   opacity: 1;
