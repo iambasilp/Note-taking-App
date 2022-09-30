@@ -110,13 +110,12 @@ addbutton.addEventListener("click", (e) => {
       date: `${month} ${daynumber}, ${year}`,
     };
     if(!isUpdate){
-    notes.push(noteInfo);
     localStorage.setItem("notes-list", JSON.stringify(notes))
     }else{
     isUpdate = false;
     notes[UpdateId] = noteInfo;
     }
-    
+    notes.push(noteInfo);
     closeIcon.click();
     shownotes();
   }
