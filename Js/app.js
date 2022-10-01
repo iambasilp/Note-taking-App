@@ -35,8 +35,9 @@ closeIcon.addEventListener("click", () => {
 });
 
 function shownotes() {
-    document.querySelectorAll('.note').forEach((note)=>{note.remove()})
-  notes.forEach((note,id) => {
+  document.querySelectorAll(".note").forEach(li => li.remove());
+
+      notes.forEach((note,id) => {
       let liTag = `      <li class="note">
       <div class="details">
         <p>${note.title}</p>
@@ -58,6 +59,8 @@ function shownotes() {
     </li>`;
     addbox.insertAdjacentHTML("afterend", liTag);
   });
+    
+  
 }
 shownotes();
 
@@ -82,9 +85,9 @@ addbox.addEventListener('click',()=>{
   popupBox.classList.add('show')
 })
 function editnote(noteid,title,desc){
+  updateId = noteid;
   isUpdate= true;
   addbox.click()
-  updateId = noteid;
   titleTag.value = title;
   descTag.value = desc;
   addbutton.innerHTML = 'Update notes'
@@ -110,10 +113,13 @@ addbutton.addEventListener("click", (e) => {
       date: `${month} ${daynumber}, ${year}`,
     };
    if(!isUpdate){
+    if(!notes){
+      notes = []
+    }
     notes.push(noteInfo);
     }else{
     isUpdate = false;
-    notes[UpdateId] = noteInfo;
+    notes[updateId] = noteInfo;
     }
     
     localStorage.setItem("notes-list", JSON.stringify(notes))
