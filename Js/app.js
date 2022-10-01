@@ -19,7 +19,7 @@ const months = [
   "Deceber",
 ];
 const notes = JSON.parse(localStorage.getItem("notes-list")) || [];
-let isUpdate = false:
+let isUpdate = false;
 let updateId;
 addbox.addEventListener("click", () => {
   popupBox.classList.add("show");
@@ -71,7 +71,7 @@ function showmenu(selectednote){
   })
 }
 function deletenote(deleteId){
-  let confirmsg = confirm(are you sure ?);
+  let confirmsg = confirm("are you sure ?");
   if(! confirmsg) return;
   notes.splice(deleteId,1)
   shownotes()
