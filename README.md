@@ -1,5 +1,5 @@
 
-# Javascript Todo App
+# Javascript Note Taking App
 
 I have shown you how to Build A Notes App in HTML CSS & JavaScript. In this note app, users can easily add, edit, or delete their notes. The notes user has added to this app will be stored in the browser's local storage so, they won't remove on page refresh or tab close.
 
@@ -7,6 +7,10 @@ I have shown you how to Build A Notes App in HTML CSS & JavaScript. In this note
 ## Preview
 
 ![Notetaking App](https://i.ibb.co/0X04CWW/Screenshot-104.png)
+
+
+## 🛠 Skills
+Javascript, HTML, CSS...
 
 
 ## Features
@@ -45,14 +49,10 @@ Along this App, i successfully built a Note taking app You can add new notes by 
 
 ## Support
 
-For support, email basilxg321@gmail.com
+For support, email basilxg321@gmail.com 
 
 
 ## Authors
 
 - [@iambasilp](https://www.github.com/iambasilp)
-
-
-## Skills to do
-Javascript, HTML, CSS...
 
