@@ -10,7 +10,7 @@ I have shown you how to Build A Notes App in HTML CSS & JavaScript. In this note
 
 
 ## 🛠 Skills
-Javascript, HTML, CSS...
+Javascript, HTML, CSS, Git...
 
 
 ## Features
